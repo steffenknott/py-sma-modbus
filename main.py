@@ -51,7 +51,7 @@ if args.type == "tripower":
 elif args.type == "sbstorage":
     add_sbstorage_register(wr)
 elif args.type == "sbxx-1av-41":
-    add_sbxx-1AV-41_register(wr)
+    add_sbxx_1av_41_register(wr)
 else:
     sys.exit("Unknown inverter type.")
 
