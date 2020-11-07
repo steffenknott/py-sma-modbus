@@ -37,6 +37,10 @@ parser.add_argument('-u', '--unit',
                     type=int,
                     required=True,
                     help='modbus unit')
+parser.add_argument('-t', '--type',
+                    type=str,
+                    required=True,
+                    help='inverter type')
 
 args = parser.parse_args()
 
