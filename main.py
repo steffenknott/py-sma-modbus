@@ -1,4 +1,4 @@
-import argparse
+import argparse, sys
 
 from modbus import Modbus
 from sma import add_tripower_register
@@ -45,7 +45,15 @@ parser.add_argument('-t', '--type',
 args = parser.parse_args()
 
 wr = Modbus(args, logger=TableLogger())
-add_tripower_register(wr)
+
+if args.type == "tripower":
+    add_tripower_register(wr)
+elif args.type == "sbstorage":
+    add_sbstorage_register(wr)
+elif args.type == "sbxx-1av-41":
+    add_sbxx-1AV-41_register(wr)
+else:
+    sys.exit("Unknown inverter type.")
 
 if args.list:
     wr.list_available_registers()
