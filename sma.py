@@ -323,7 +323,7 @@ def add_tripower_register(wr: Modbus):
     wr.add_register(S32(41257, "Inverter.VArModCfg.PFCtlComCfg.PFEEI", "Sollwert cos(Phi) gemäß EEI-Konvention"))
 
 # Modbus registers for SB3.0-1AV-41 / SB3.6-1AV-41 / SB4.0-1AV-41 / SB5.0-1AV-41 / SB6.0-1AV-41 (V12)
-def add_sbxx-1AV-41_register(wr: Modbus):
+def add_sbxx_1av_41_register(wr: Modbus):
     wr.add_register(STR32(40497, "Nameplate.MacId", "-"))
     wr.add_register(U32(30059, "Nameplate.PkgRev", "Softwarepaket"))
     wr.add_register(U32(30559, "Operation.EvtCntUsr", "Anzahl Ereignisse für Benutzer"))
