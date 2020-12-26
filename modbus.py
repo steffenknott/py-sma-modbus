@@ -45,7 +45,7 @@ class Modbus:
                 print(f"Register with the id {register_id} does not exist")
             else:
                 register = self.available_registers[register_id]
-                self.registers.append(register_id)
+                self.registers.append(register_id) # war register_id
 
     def add_register(self, register: Register):
         self.available_registers[register.id] = register
@@ -100,6 +100,7 @@ class Modbus:
                         value = "NAN"
 
                     result[register] = value
+                    print("Register {} has value {}".format(register, value))
         if self.gui:
             self.gui.update(result)
         else:

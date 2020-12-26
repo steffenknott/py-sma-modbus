@@ -1,7 +1,7 @@
 import argparse, sys
 
 from modbus import Modbus
-from sma import add_tripower_register
+from sma import add_tripower_register, add_sbstorage_register, add_sbxx_1av_41_register
 from logger import TableLogger
 
 parser = argparse.ArgumentParser(description='Gather data of your sma inverter')
